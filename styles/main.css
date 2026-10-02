@@ -1,0 +1,133 @@
+/* Шаг 2: Подключение шрифта из Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* Шаг 3: Объявление глобальных CSS-переменных (Custom Properties) */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #f3f4f6;
+    --text-color: #1f2937;
+    --bg-color: #ffffff;
+    --accent-color: #3b82f6;
+    --base-padding: 1.5rem;
+    --border-radius: 0.5rem;
+    --font-main: 'Inter', sans-serif;
+}
+
+/* Шаг 1: Глобальное обнуление и защищенный расчет ширины */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Базовые настройки текста и страницы */
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+    letter-spacing: 0.02rem;
+    padding: var(--base-padding);
+}
+
+/* Шаг 5: Центрирование макро-контейнеров с помощью margin: auto и padding */
+main, header, footer {
+    max-width: 50rem;
+    margin: 0 auto 1.5rem auto;
+    background-color: var(--bg-color);
+    padding: calc(var(--base-padding) * 1.5);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+/* Шапка профиля */
+header {
+    text-align: center;
+}
+
+header img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 0.2rem solid var(--primary-color);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Секции резюме */
+section {
+    margin-bottom: 1.5rem;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.1rem solid var(--secondary-color);
+    padding-bottom: 0.3rem;
+}
+
+/* Формы */
+form div {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 0.1rem solid #d1d5db;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent-color);
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
