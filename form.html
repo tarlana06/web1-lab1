@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация и анкетирование</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+    <header>
+        <h1>Анкета регистрации пользователя</h1>
+        <nav>
+            <a href="index.html">На главную</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="#" method="POST">
+            
+            <!-- Шаг 1: Группировка данных пользователя -->
+            <fieldset>
+                <legend>Личные данные</legend>
+                
+                <div>
+                    <label for="username">Имя пользователя (латиница, от 3 до 15 символов):</label>
+                    <input type="text" id="username" name="username" required pattern="[A-Za-z]{3,15}" title="Только латинские буквы от 3 до 15 символов">
+                </div>
+
+                <div>
+                    <label for="age">Возраст (от 18 до 99):</label>
+                    <input type="number" id="age" name="age" min="18" max="99" required>
+                </div>
+            </fieldset>
+
+            <!-- Шаг 2: Вариативные элементы управления -->
+            <fieldset>
+                <legend>Дополнительная информация</legend>
+
+                <div>
+                    <label for="course">Курс обучения:</label>
+                    <select id="course" name="course" required>
+                        <option value="">-- Выберите курс --</option>
+                        <option value="1">1 курс</option>
+                        <option value="2">2 курс</option>
+                        <option value="3">3 курс</option>
+                        <option value="4">4 курс</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Форма обучения:</label>
+                    <label><input type="radio" name="study_form" value="full-time" required> Очная</label>
+                    <label><input type="radio" name="study_form" value="distance"> Дистанционная</label>
+                </div>
+
+                <div>
+                    <label><input type="checkbox" name="agree" required> Я согласен(-а) с условиями обработки данных</label>
+                </div>
+            </fieldset>
+
+            <button type="submit">Отправить анкету</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Алиева Тарлан</p>
+    </footer>
+
+</body>
+</html>
